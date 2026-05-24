@@ -1,0 +1,89 @@
+{
+  "common": {
+    "companyIntro": {
+      "title": "We build beautiful products",
+      "description": "We design and ship high-quality software for users all over the world."
+    },
+    "header": {
+      "siteTitle": "Tech Product Showcase"
+    },
+    "footer": {
+      "copyright": "© 2025 Product Showcase. All rights reserved.",
+      "note": "Product data auto-loaded from server.",
+      "contact": {
+        "emailLabel": "Email",
+        "email": "support@productshowcase.com",
+        "phoneLabel": "Phone",
+        "phone": "+1-800-123-4567",
+        "webChatLabel": "WebChat",
+        "webChatAlt": "WeChat contact QR code"
+      }
+    },
+    "product": {
+      "productTitle": "Our Products"
+    }
+  },
+  "product": {
+    "priceLabel": "Price",
+    "buyButton": "Buy now",
+    "labels": {
+      "manufacturer": "Manufacturer",
+      "material": "Material",
+      "style": "Style",
+      "functionality": "Functionality",
+      "colors": "Colors",
+      "sizes": "Sizes",
+      "specs": "Specs"
+    }
+  },
+  "products": [
+    {
+      "id": 1,
+      "name": "High-performance Laptop",
+      "price": 8999,
+      "imageUrl": "/images/1.jpg",
+      "manufacturer": "Vertex Tech",
+      "material": "Aluminum",
+      "style": "Sleek",
+      "specs": {
+        "cpu": "8-core 3.2GHz",
+        "ram": "16GB",
+        "storage": "512GB SSD"
+      },
+      "colors": ["Space Gray", "Silver"],
+      "sizes": ["13-inch", "15-inch"]
+    },
+    {
+      "id": 2,
+      "name": "Wireless Bluetooth Headphones",
+      "price": 699,
+      "imageUrl": "/images/2.jpg",
+      "manufacturer": "AudioPro",
+      "material": "Plastic/Leather",
+      "functionality": "Noise-canceling",
+      "specs": {
+        "battery": "30 hours",
+        "range": "10m"
+      },
+      "colors": ["Black", "White"],
+      "sizes": []
+    },
+    {
+      "id": 3,
+      "name": "Comfort Crew Socks",
+      "price": 49,
+      "imageUrl": "/images/3.jpg",
+      "manufacturer": "Huang Textiles",
+      "material": "Organic Cotton",
+      "functionality": "Moisture-wicking, Breathable",
+      "style": "Crew",
+      "specs": {
+        "thickness": "Medium",
+        "seam": "Flat toe seam",
+        "length": "Crew length"
+      },
+      "colors": ["Black", "White", "Gray"],
+      "sizes": ["S", "M", "L"]
+    }
+  ]
+}

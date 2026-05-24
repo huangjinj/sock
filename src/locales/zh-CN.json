@@ -1,0 +1,89 @@
+{
+  "common": {
+    "companyIntro": {
+      "title": "我们打造优雅产品",
+      "description": "我们为全球用户设计并交付高品质软件。"
+    },
+    "header": {
+      "siteTitle": "科技产品展示"
+    },
+    "footer": {
+      "copyright": "© 2025 产品展示。保留所有权利。",
+      "note": "产品数据从服务器自动加载。",
+      "contact": {
+        "emailLabel": "电子邮件",
+        "email": "support@productshowcase.com",
+        "phoneLabel": "电话",
+        "phone": "+1-800-123-4567",
+        "webChatLabel": "Web聊天",
+        "webChatAlt": "微信联系二维码"
+      }
+    },
+    "product": {
+      "productTitle": "我们的产品"
+    }
+  },
+  "product": {
+    "priceLabel": "价格",
+    "buyButton": "立即购买",
+    "labels": {
+      "manufacturer": "制造商",
+      "material": "材质",
+      "style": "风格",
+      "functionality": "功能",
+      "colors": "颜色",
+      "sizes": "尺寸",
+      "specs": "规格"
+    }
+  },
+  "products": [
+    {
+      "id": 1,
+      "name": "高性能笔记本电脑",
+      "price": 8999,
+      "imageUrl": "/images/1.jpg",
+      "manufacturer": "Vertex Tech",
+      "material": "铝合金",
+      "style": "时尚",
+      "specs": {
+        "cpu": "8核 3.2GHz",
+        "ram": "16GB",
+        "storage": "512GB SSD"
+      },
+      "colors": ["星空灰", "银色"],
+      "sizes": ["13英寸", "15英寸"]
+    },
+    {
+      "id": 2,
+      "name": "无线蓝牙耳机",
+      "price": 699,
+      "imageUrl": "/images/2.jpg",
+      "manufacturer": "AudioPro",
+      "material": "塑料/皮革",
+      "functionality": "降噪",
+      "specs": {
+        "battery": "30小时",
+        "range": "10米"
+      },
+      "colors": ["黑色", "白色"],
+      "sizes": []
+    },
+    {
+      "id": 3,
+      "name": "舒适船袜",
+      "price": 49,
+      "imageUrl": "/images/3.jpg",
+      "manufacturer": "Huang Textiles",
+      "material": "有机棉",
+      "functionality": "吸湿排汗，透气",
+      "style": "船袜",
+      "specs": {
+        "thickness": "中等",
+        "seam": "平缝脚趾",
+        "length": "船袜长度"
+      },
+      "colors": ["黑色", "白色", "灰色"],
+      "sizes": ["S", "M", "L"]
+    }
+  ]
+}
