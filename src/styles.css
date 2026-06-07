@@ -19,6 +19,21 @@ body {
 button,
 select {
   font: inherit;
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 0.6rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.75rem;
+  background-color: #ffffff;
+  color: #101828;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+button:focus-visible,
+select:focus-visible {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
 }
 
 button {

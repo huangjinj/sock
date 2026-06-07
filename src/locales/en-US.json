@@ -12,11 +12,11 @@
       "note": "Socks",
       "contact": {
         "address" : "Lane 780, Lianxi Road, Pudong New Area, Shanghai, China",
-        "emailLabel": "Email",
+        "emailLabel": "Email: ",
         "email": "cmczoe@163.com",
-        "phoneLabel": "Phone",
+        "phoneLabel": "Phone: ",
         "phone": "+86-18721829528",
-        "webChatLabel": "WebChat",
+        "webChatLabel": "Scan the QR code to add me on WeChat",
         "webChatAlt": "WeChat contact QR code"
       }
     },

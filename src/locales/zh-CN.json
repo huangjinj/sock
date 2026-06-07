@@ -12,11 +12,11 @@
       "note": "袜子",
       "contact": {
         "address" : "中国上海浦东新区莲溪路780弄",
-        "emailLabel": "电子邮件",
+        "emailLabel": "电子邮件:",
         "email": "cmczoe@163.com",
-        "phoneLabel": "电话",
+        "phoneLabel": "电话:",
         "phone": "+86-18721829528",
-        "webChatLabel": "Web聊天",
+        "webChatLabel": "微信扫码添加我为朋友",
         "webChatAlt": "微信联系二维码"
       }
     },

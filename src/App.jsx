@@ -80,6 +80,7 @@ function ProductCard({ product, locale, buyButtonLabel, labels }) {
 
 export default function App() {
   const [locale, setLocale] = useState('en-US')
+  const [activePage, setActivePage] = useState('SHOP')
   const t = useMemo(() => loadTranslations(locale), [locale])
 
   return (
@@ -88,6 +89,17 @@ export default function App() {
         <div>
           <p className="brand">{t.common.header.siteTitle}</p>
         </div>
+        <nav className="top-menu">
+          {['SHOP', 'ABOUT', 'CONTACT'].map((item) => (
+            <button 
+              key={item} 
+              className={`menu-item ${activePage === item ? 'active' : ''}`}
+              onClick={() => setActivePage(item)}
+            >
+              {item}
+            </button>
+          ))}
+        </nav>
         <div className="language-switcher">
           <label htmlFor="locale-select">Language</label>
           <select
@@ -105,33 +117,63 @@ export default function App() {
       </header>
 
       <main>
-        <section className="hero-section">
-          <div>
-            <h1>{t.common.companyIntro.title}</h1>
-            <p>{t.common.companyIntro.description}</p>
-          </div>
-        </section>
+        {activePage === 'SHOP' && (
+          <section className="products-section">
+            <div className="section-heading">
+              <h2>{t.common.product.productTitle}</h2>
+            </div>
+            <div className="products-grid">
+              {t.products.map((product) => (
+                <ProductCard
+                  key={product.id}
+                  product={product}
+                  locale={locale}
+                  buyButtonLabel={t.product.buyButton}
+                  labels={t.product.labels}
+                />
+              ))}
+            </div>
+          </section>
+        )}
 
-        <section className="products-section">
-          <div className="section-heading">
-            <h2>{t.common.product.productTitle}</h2>
-          </div>
-          <div className="products-grid">
-            {t.products.map((product) => (
-              <ProductCard
-                key={product.id}
-                product={product}
-                locale={locale}
-                buyButtonLabel={t.product.buyButton}
-                labels={t.product.labels}
-              />
-            ))}
-          </div>
-        </section>
+        {activePage === 'ABOUT' && (
+          <section className="hero-section">
+            <div>
+              <h1>{t.common.companyIntro.title}</h1>
+              <p>{t.common.companyIntro.description}</p>
+            </div>
+          </section>
+        )}
+
+        {activePage === 'CONTACT' && (
+          <section className="contact-section">
+            <div className="contact-info">
+              <div>
+                <label>{t.common.footer.contact.address}</label>
+              </div>
+              <div>
+                <label>{t.common.footer.contact.emailLabel}</label>
+                <a href={`mailto:${t.common.footer.contact.email}`}>{t.common.footer.contact.email}</a>
+              </div>
+              <div>
+                <label>{t.common.footer.contact.phoneLabel}</label>
+                <span>{t.common.footer.contact.phone}</span>
+              </div>
+              <div>
+                <img
+                  src="/images/weChat_Huang.jpg" 
+                  alt={t.common.footer.contact.webChatAlt} 
+                  style={{ width: '30%', height: '30%' }}
+                />
+                <div><label style={{ marginTop: '10px' }}>{t.common.footer.contact.webChatLabel}</label></div>
+              </div>
+            </div>
+          </section>
+        )}
       </main>
 
       <footer className="site-footer">
-        <div className="footer-contact">
+         <div className="footer-contact">
           <div>
             <label>{t.common.footer.contact.address}</label>
           </div>
