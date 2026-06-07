@@ -250,6 +250,12 @@ button {
   font-weight: 600;
 }
 
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
 @media (max-width: 640px) {
   .site-header,
   .hero-section,

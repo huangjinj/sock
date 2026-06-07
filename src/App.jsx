@@ -173,19 +173,6 @@ export default function App() {
       </main>
 
       <footer className="site-footer">
-         <div className="footer-contact">
-          <div>
-            <label>{t.common.footer.contact.address}</label>
-          </div>
-          <div>
-            <label>{t.common.footer.contact.emailLabel}</label>
-            <a href={`mailto:${t.common.footer.contact.email}`}>{t.common.footer.contact.email}</a>
-          </div>
-          <div>
-            <label>{t.common.footer.contact.phoneLabel}</label>
-            <span>{t.common.footer.contact.phone}</span>
-          </div>
-        </div>
         <p>{t.common.footer.copyright}</p>
       </footer>
     </div>
