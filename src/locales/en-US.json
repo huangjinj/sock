@@ -8,13 +8,14 @@
       "siteTitle": "Products"
     },
     "footer": {
-      "copyright": "© 2025 Product Showcase. All rights reserved.",
-      "note": "Product data auto-loaded from server.",
+      "copyright": "© 2026-now. All rights reserved.",
+      "note": "Socks",
       "contact": {
+        "address" : "Lane 780, Lianxi Road, Pudong New Area, Shanghai, China",
         "emailLabel": "Email",
-        "email": "support@productshowcase.com",
+        "email": "cmczoe@163.com",
         "phoneLabel": "Phone",
-        "phone": "+1-800-123-4567",
+        "phone": "+86-18721829528",
         "webChatLabel": "WebChat",
         "webChatAlt": "WeChat contact QR code"
       }

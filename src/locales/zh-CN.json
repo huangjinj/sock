@@ -8,13 +8,14 @@
       "siteTitle": "产品"
     },
     "footer": {
-      "copyright": "© 2026 产品展示。保留所有权利。",
-      "note": "产品数据从服务器自动加载。",
+      "copyright": "© 2026-现在 保留所有权利。",
+      "note": "袜子",
       "contact": {
+        "address" : "中国上海浦东新区莲溪路780弄",
         "emailLabel": "电子邮件",
-        "email": "support@productshowcase.com",
+        "email": "cmczoe@163.com",
         "phoneLabel": "电话",
-        "phone": "+1-800-123-4567",
+        "phone": "+86-18721829528",
         "webChatLabel": "Web聊天",
         "webChatAlt": "微信联系二维码"
       }
