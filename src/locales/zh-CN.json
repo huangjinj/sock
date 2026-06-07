@@ -1,14 +1,14 @@
 {
   "common": {
     "companyIntro": {
-      "title": "我们打造优雅产品",
-      "description": "我们为全球用户设计并交付高品质软件。"
+      "title": "舒适与个性，都在脚下",
+      "description": "我们就坚持选品的初心：既要为消费者提供舒适耐穿的基础款，也愿意为偏爱个性的朋友打造有设计感的小众款式。我们只做自己日常愿意天天穿的好袜子。从新疆长绒棉原料的筛选，到袜口弹性的调试、后跟的立体剪裁，每一双袜子都经过我们亲自试穿与调整，确保贴合脚型不滑落、透气不闷汗，不辜负每一份信任。\n\n十几年过去，我们依旧保持小而美的节奏，坚持一双一双把控品质：基础款追求极致的舒适度，联名款玩出新鲜趣味。我们还与国内的独立插画师合作，推出了多款限定艺术袜，将喜爱的插画穿在脚上，为日常穿搭注入小小惊喜。\n\n现在，您不仅可以在位于上海的线下实体店找到我们，也可以安坐家中，直接访问我们的线上店铺：https://huangjinj.github.io/sock/\n\n期待您在这里挑到合脚又心仪的好袜子，享受琐碎日常中的细腻舒适。"
     },
     "header": {
-      "siteTitle": "科技产品展示"
+      "siteTitle": "产品"
     },
     "footer": {
-      "copyright": "© 2025 产品展示。保留所有权利。",
+      "copyright": "© 2026 产品展示。保留所有权利。",
       "note": "产品数据从服务器自动加载。",
       "contact": {
         "emailLabel": "电子邮件",
@@ -36,43 +36,12 @@
       "specs": "规格"
     }
   },
-  "products": [
+  "products":[
     {
       "id": 1,
-      "name": "高性能笔记本电脑",
-      "price": 8999,
-      "imageUrl": "images/1.jpg",
-      "manufacturer": "Vertex Tech",
-      "material": "铝合金",
-      "style": "时尚",
-      "specs": {
-        "cpu": "8核 3.2GHz",
-        "ram": "16GB",
-        "storage": "512GB SSD"
-      },
-      "colors": ["星空灰", "银色"],
-      "sizes": ["13英寸", "15英寸"]
-    },
-    {
-      "id": 2,
-      "name": "无线蓝牙耳机",
-      "price": 699,
-      "imageUrl": "images/2.jpg",
-      "manufacturer": "AudioPro",
-      "material": "塑料/皮革",
-      "functionality": "降噪",
-      "specs": {
-        "battery": "30小时",
-        "range": "10米"
-      },
-      "colors": ["黑色", "白色"],
-      "sizes": []
-    },
-    {
-      "id": 3,
-      "name": "舒适船袜",
+      "name": "4双装艺术插画袜",
       "price": 49,
-      "imageUrl": "images/3.jpg",
+      "imageUrl": "images/4_Pack_Art.jpg",
       "manufacturer": "Huang Textiles",
       "material": "有机棉",
       "functionality": "吸湿排汗，透气",

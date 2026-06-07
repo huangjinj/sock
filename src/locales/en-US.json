@@ -1,11 +1,11 @@
 {
   "common": {
     "companyIntro": {
-      "title": "We build beautiful products",
-      "description": "We design and ship high-quality software for users all over the world."
+      "title": "‌Comfort and personality, both at your feet",
+      "description": "We have stuck to our original philosophy: we offer comfy, durable everyday styles for customers who value simplicity, and we also create eye-catching niche designs for people who love to express their personality through small details. We only make socks that we are happy to wear ourselves every single day. From selecting Xinjiang long-staple cotton, adjusting the elasticity of the cuff, to tailoring the three-dimensional heel, every pair of socks is tested and adjusted by us personally, ensuring a perfect fit that doesn’t slip, stays breathable and keeps your feet comfortable all day.\n\nAfter over a decade, we still keep our small-batch, quality-focused rhythm. We perfect the comfort of our basic styles, and bring fresh creativity to our collaborative collections. We’ve also partnered with local independent illustrators to launch many limited-edition art socks — turn your favorite illustrations into wearable details, and add a little surprise to your daily outfits.\n\nYou can find us in our physical store in Shanghai, or shop directly from your couch through our online store at https://huangjinj.github.io/sock/.\n\nCome find your perfect pair of socks, and enjoy a little comfort in your everyday life!"
     },
     "header": {
-      "siteTitle": "Tech Product Showcase"
+      "siteTitle": "Products"
     },
     "footer": {
       "copyright": "© 2025 Product Showcase. All rights reserved.",
@@ -39,40 +39,9 @@
   "products": [
     {
       "id": 1,
-      "name": "High-performance Laptop",
-      "price": 8999,
-      "imageUrl": "images/1.jpg",
-      "manufacturer": "Vertex Tech",
-      "material": "Aluminum",
-      "style": "Sleek",
-      "specs": {
-        "cpu": "8-core 3.2GHz",
-        "ram": "16GB",
-        "storage": "512GB SSD"
-      },
-      "colors": ["Space Gray", "Silver"],
-      "sizes": ["13-inch", "15-inch"]
-    },
-    {
-      "id": 2,
-      "name": "Wireless Bluetooth Headphones",
-      "price": 699,
-      "imageUrl": "images/2.jpg",
-      "manufacturer": "AudioPro",
-      "material": "Plastic/Leather",
-      "functionality": "Noise-canceling",
-      "specs": {
-        "battery": "30 hours",
-        "range": "10m"
-      },
-      "colors": ["Black", "White"],
-      "sizes": []
-    },
-    {
-      "id": 3,
-      "name": "Comfort Crew Socks",
-      "price": 49,
-      "imageUrl": "images/3.jpg",
+      "name": "4-Pack Art Socks",
+      "price": 39,
+      "imageUrl": "images/4_Pack_Art.jpg",
       "manufacturer": "Huang Textiles",
       "material": "Organic Cotton",
       "functionality": "Moisture-wicking, Breathable",
