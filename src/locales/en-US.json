@@ -53,7 +53,7 @@
       "id": 1,
       "name": "4-pack of art illustration socks",
       "price": 49,
-      "imageUrl": "images/4_Pack_Art.jpg",
+      "imageUrl": "images/1_4_Pack_Art.jpg",
       "manufacturer": "FusionSock",
       "quantity": 4,
       "material": "Organic cotton (92%) + Spandex (8%)",
@@ -68,7 +68,9 @@
         "sockSize": "26-29",
         "shoeSize": "35-38"
       },
-      "colors": ["black", "white", "gray"]
+      "colors": ["Blue & Red", "Yellow & Orrage", "White & Purpule", "Green & White"],
+      "images": ["images/1_Blue.jpg", "images/1_Orrage.jpg", "images/1_Key_Features.jpg", "images/1_Perfect_Gift.jpg", 
+         "images/1_Color_Options.jpg", "images/1_Premium_Comfort.jpg"]
     }
   ]
 }

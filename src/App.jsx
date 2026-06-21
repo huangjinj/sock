@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useEffect, useState } from 'react'
 import { loadTranslations, supportedLocales, selectLocale } from './i18n'
 
 function formatPrice(value, locale) {
@@ -30,6 +30,18 @@ function ProductCard({ product, locale, labels, onProductClick }) {
 }
 
 function ProductDetails({ product, locale, labels, specItems, onBack }) {
+  const [currentImage, setCurrentImage] = useState(0);
+  
+  // 自动轮播效果
+  useEffect(() => {
+    if (product.images && product.images.length > 1) {
+      const interval = setInterval(() => {
+        setCurrentImage(prev => (prev + 1) % product.images.length);
+      }, 3000);
+      return () => clearInterval(interval);
+    }
+  }, [product.images]);
+  
   // 确保specItems存在，如果不存在则使用默认值
   const t = { 
     product: { 
@@ -45,13 +57,41 @@ function ProductDetails({ product, locale, labels, specItems, onBack }) {
       <button className="back-button" onClick={onBack}>← Back to Shop</button>
       <div className="product-details-container">
         <div className="product-image-large">
-          <img
-            src={product.imageUrl}
-            alt={product.name}
-            onError={(event) => {
-              event.currentTarget.style.display = 'none'
-            }}
-          />
+          {product.images && product.images.length > 0 ? (
+            <div className="image-carousel">
+              {product.images.map((imageUrl, index) => (
+                <img
+                  key={index}
+                  src={imageUrl}
+                  alt={`${product.name} - ${index + 1}`}
+                  className={index === currentImage ? 'active' : ''}
+                  style={{ display: index === currentImage ? 'block' : 'none' }}
+                  onError={(event) => {
+                    event.currentTarget.style.display = 'none'
+                  }}
+                />
+              ))}
+              {product.images.length > 1 && (
+                <div className="image-indicators">
+                  {product.images.map((_, index) => (
+                    <span 
+                      key={index} 
+                      className={index === currentImage ? 'active' : ''} 
+                      onClick={() => setCurrentImage(index)}
+                    />
+                  ))}
+                </div>
+              )}
+            </div>
+          ) : (
+            <img
+              src={product.imageUrl}
+              alt={product.name}
+              onError={(event) => {
+                event.currentTarget.style.display = 'none'
+              }}
+            />
+          )}
         </div>
         <div className="product-info">
           <h2>{product.name}</h2>

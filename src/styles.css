@@ -484,4 +484,60 @@ main {
   .product-info dl {
     grid-template-columns: 1fr;
   }
+
+  /* Image Carousel */
+  .image-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .image-carousel img {
+    width: 100%;
+    height: auto;
+    display: none;
+    object-fit: cover;
+  }
+
+  .image-carousel img.active {
+    display: block;
+  }
+
+  .image-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .image-indicators span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .image-indicators span:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .image-indicators span.active {
+    background-color: #ffffff;
+  }
+
+  /* Responsive adjustments for image carousel */
+  @media (max-width: 640px) {
+    .image-carousel {
+      max-width: 100%;
+    }
+  }
 }
