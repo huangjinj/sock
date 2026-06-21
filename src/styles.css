@@ -193,6 +193,151 @@ button {
   font-weight: 700;
 }
 
+/* 产品详情页面样式 */
+.product-details-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.back-button {
+  margin-bottom: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.back-button:hover {
+  background: #e2e8f0;
+  color: #1e293b;
+}
+
+.product-details-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  background: #ffffff;
+  border-radius: 1.25rem;
+  padding: 2rem;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.05);
+}
+
+.product-image-large {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.product-image-large img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: contain;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.product-info h2 {
+  margin: 0;
+  font-size: 1.75rem;
+  color: #101828;
+}
+
+.product-price-large {
+  margin: 0;
+  color: #2563eb;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.product-info dl {
+  margin: 0;
+  display: grid;
+  gap: 0.75rem 1rem;
+  grid-template-columns: auto 1fr;
+  color: #475569;
+}
+
+.product-info dt {
+  font-weight: 600;
+  color: #374151;
+}
+
+.product-info dd {
+  margin: 0;
+}
+
+.product-colors {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.product-colors h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #374151;
+}
+
+.color-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.color-badge {
+  padding: 0.4rem 0.8rem;
+  background: #f1f5f9;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.product-specs,
+.product-fit {
+  margin-top: 0.5rem;
+}
+
+.product-specs h3,
+.product-fit h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+  color: #374151;
+}
+
+.product-specs ul,
+.product-fit ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: #475569;
+  font-size: 0.95rem;
+}
+
+.product-specs li,
+.product-fit li {
+  margin-bottom: 0.5rem;
+}
+
+.spec-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.spec-item:last-child {
+  border-bottom: none;
+}
+
 .product-details dl {
   margin: 0;
   display: grid;
@@ -306,6 +451,15 @@ main {
   }
 
   .product-details dl {
+    grid-template-columns: 1fr;
+  }
+
+  .product-details-container {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .product-info dl {
     grid-template-columns: 1fr;
   }
 }

@@ -9,9 +9,9 @@ function formatPrice(value, locale) {
   }).format(value)
 }
 
-function ProductCard({ product, locale, buyButtonLabel, labels }) {
+function ProductCard({ product, locale, labels, onProductClick }) {
   return (
-    <article className="product-card">
+    <article className="product-card" onClick={() => onProductClick(product)} style={{ cursor: 'pointer' }}>
       <div className="product-image">
         <img
           src={product.imageUrl}
@@ -24,63 +24,145 @@ function ProductCard({ product, locale, buyButtonLabel, labels }) {
       <div className="product-details">
         <h3>{product.name}</h3>
         <p className="product-price">{formatPrice(product.price, locale)}</p>
-        <dl>
-          {product.manufacturer && (
-            <>
-              <dt>{labels.manufacturer}</dt>
-              <dd>{product.manufacturer}</dd>
-            </>
-          )}
-          {product.material && (
-            <>
-              <dt>{labels.material}</dt>
-              <dd>{product.material}</dd>
-            </>
-          )}
-          {product.style && (
-            <>
-              <dt>{labels.style}</dt>
-              <dd>{product.style}</dd>
-            </>
-          )}
-          {product.functionality && (
-            <>
-              <dt>{labels.functionality}</dt>
-              <dd>{product.functionality}</dd>
-            </>
-          )}
-        </dl>
-        <div className="product-meta">
-          {product.colors?.length > 0 && (
-            <p>
-              <strong>{labels.colors}:</strong> {product.colors.join(', ')}
-            </p>
-          )}
-          {product.sizes?.length > 0 && (
-            <p>
-              <strong>{labels.sizes}:</strong> {product.sizes.join(', ')}
-            </p>
-          )}
-        </div>
-        <div className="product-specs">
-          <h4>{labels.specs}</h4>
-          <ul>
-            {Object.entries(product.specs).map(([key, value]) => (
-              <li key={key}>
-                <strong>{key}:</strong> {value}
-              </li>
-            ))}
-          </ul>
-        </div>
       </div>
     </article>
+  )
+}
+
+function ProductDetails({ product, locale, labels, onBack }) {
+  return (
+    <div className="product-details-page">
+      <button className="back-button" onClick={onBack}>← Back to Shop</button>
+      <div className="product-details-container">
+        <div className="product-image-large">
+          <img
+            src={product.imageUrl}
+            alt={product.name}
+            onError={(event) => {
+              event.currentTarget.style.display = 'none'
+            }}
+          />
+        </div>
+        <div className="product-info">
+          <h2>{product.name}</h2>
+          <p className="product-price-large">{formatPrice(product.price, locale)}</p>
+          
+          <dl>
+            {product.manufacturer && (
+              <>
+                <dt>{labels.manufacturer}</dt>
+                <dd>{product.manufacturer}</dd>
+              </>
+            )}
+            {product.quantity && (
+              <>
+                <dt>Quantity</dt>
+                <dd>{product.quantity}</dd>
+              </>
+            )}
+            {product.material && (
+              <>
+                <dt>{labels.material}</dt>
+                <dd>{product.material}</dd>
+              </>
+            )}
+            {product.functionality && (
+              <>
+                <dt>{labels.functionality}</dt>
+                <dd>{product.functionality}</dd>
+              </>
+            )}
+          </dl>
+
+          {product.colors && product.colors.length > 0 && (
+            <div className="product-colors">
+              <h3>{labels.colors}</h3>
+              <div className="color-options">
+                {product.colors.map((color, index) => (
+                  <span key={index} className="color-badge">{color}</span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {product.specs && Object.keys(product.specs).length > 0 && (
+            <div className="product-specs">
+              <h3>{labels.specs}</h3>
+              <ul>
+                {Object.entries(product.specs).map(([key, value]) => {
+                  let specLabel = value;
+                  if (key === 'thickness') {
+                    const thicknessMap = {
+                      'thin': '偏薄',
+                      'medium': '居中',
+                      'thick': '偏厚',
+                      '偏薄': '偏薄',
+                      '居中': '居中',
+                      '偏厚': '偏厚'
+                    };
+                    specLabel = thicknessMap[value] || value;
+                  } else if (key === 'elasticity') {
+                    const elasticityMap = {
+                      'slight': '微弹',
+                      'elastic': '弹力',
+                      'super elastic': '超弹',
+                      '微弹': '微弹',
+                      '弹力': '弹力',
+                      '超弹': '超弹'
+                    };
+                    specLabel = elasticityMap[value] || value;
+                  } else if (key === 'flexibility') {
+                    const flexibilityMap = {
+                      'regular': '常规',
+                      'soft': '柔软',
+                      'very soft': '很柔软',
+                      '常规': '常规',
+                      '柔软': '柔软',
+                      '很柔软': '很柔软'
+                    };
+                    specLabel = flexibilityMap[value] || value;
+                  }
+                  return (
+                    <li key={key}>
+                      <strong>{key}:</strong> {specLabel}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          )}
+
+          {product.fit && (
+            <div className="product-fit">
+              <h3>{labels.fit}</h3>
+              <ul>
+                {Object.entries(product.fit).map(([key, value]) => (
+                  <li key={key}>
+                    <strong>{key}:</strong> {value}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
   )
 }
 
 export default function App() {
   const [locale, setLocale] = useState('en-US')
   const [activePage, setActivePage] = useState('SHOP')
+  const [selectedProduct, setSelectedProduct] = useState(null)
   const t = useMemo(() => loadTranslations(locale), [locale])
+
+  const handleProductClick = (product) => {
+    setSelectedProduct(product)
+  }
+
+  const handleBackToShop = () => {
+    setSelectedProduct(null)
+  }
 
   return (
     <div className="page-shell">
@@ -118,19 +200,31 @@ export default function App() {
       <main>
         {activePage === 'SHOP' && (
           <section className="products-section">
-            <div className="section-heading">
-              <h2>{t.common.product.productTitle}</h2>
-            </div>
-            <div className="products-grid">
-              {t.products.map((product) => (
-                <ProductCard
-                  key={product.id}
-                  product={product}
-                  locale={locale}
-                  labels={t.product.labels}
-                />
-              ))}
-            </div>
+            {selectedProduct ? (
+              <ProductDetails 
+                product={selectedProduct} 
+                locale={locale} 
+                labels={t.product.labels} 
+                onBack={handleBackToShop}
+              />
+            ) : (
+              <>
+                <div className="section-heading">
+                  <h2>{t.common.product.productTitle}</h2>
+                </div>
+                <div className="products-grid">
+                  {t.products.map((product) => (
+                    <ProductCard
+                      key={product.id}
+                      product={product}
+                      locale={locale}
+                      labels={t.product.labels}
+                      onProductClick={handleProductClick}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
           </section>
         )}
 

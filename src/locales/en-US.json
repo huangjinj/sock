@@ -47,10 +47,10 @@
       "material": "Organic cotton (92%) + Spandex (8%)",
       "functionality": "Moisture-wicking, breathable and antibacterial",
       "specs": {
-        "thickness": "1",
-        "elasticity": "2",
-        "flexibility": "3"
-      },
+          "thickness": "thin",
+          "elasticity": "elastic",
+          "flexibility": "very soft"
+        },
       "fit": {
         "type": "short cuff",
         "sockSize": "26-29",
