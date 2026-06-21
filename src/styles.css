@@ -250,6 +250,12 @@ button {
   background: #1d4ed8;
 }
 
+main {
+  flex: 1; /* 关键：主内容区自动撑满剩余空间，确保 footer 贴底 */
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
 .site-footer {
   padding: 1.5rem;
   background: #0f172a;
