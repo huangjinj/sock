@@ -72,7 +72,6 @@ function ProductCard({ product, locale, buyButtonLabel, labels }) {
             ))}
           </ul>
         </div>
-        <button type="button">{buyButtonLabel}</button>
       </div>
     </article>
   )
@@ -128,7 +127,6 @@ export default function App() {
                   key={product.id}
                   product={product}
                   locale={locale}
-                  buyButtonLabel={t.product.buyButton}
                   labels={t.product.labels}
                 />
               ))}

@@ -5,7 +5,7 @@
       "description": "We have stuck to our original philosophy: we offer comfy, durable everyday styles for customers who value simplicity, and we also create eye-catching niche designs for people who love to express their personality through small details. We only make socks that we are happy to wear ourselves every single day. From selecting Xinjiang long-staple cotton, adjusting the elasticity of the cuff, to tailoring the three-dimensional heel, every pair of socks is tested and adjusted by us personally, ensuring a perfect fit that doesn’t slip, stays breathable and keeps your feet comfortable all day.\n\nAfter over a decade, we still keep our small-batch, quality-focused rhythm. We perfect the comfort of our basic styles, and bring fresh creativity to our collaborative collections. We’ve also partnered with local independent illustrators to launch many limited-edition art socks — turn your favorite illustrations into wearable details, and add a little surprise to your daily outfits.\n\nYou can find us in our physical store in Shanghai, or shop directly from your couch through our online store at https://huangjinj.github.io/sock/.\n\nCome find your perfect pair of socks, and enjoy a little comfort in your everyday life!"
     },
     "header": {
-      "siteTitle": "Products"
+      "siteTitle": "FusionSock"
     },
     "footer": {
       "copyright": "© 2026-now. All rights reserved.",
@@ -26,34 +26,37 @@
   },
   "product": {
     "priceLabel": "Price",
-    "buyButton": "Buy now",
     "labels": {
-      "manufacturer": "Manufacturer",
+      "manufacturer": "Brand",
       "material": "Material",
-      "style": "Style",
       "functionality": "Functionality",
       "colors": "Colors",
-      "sizes": "Sizes",
-      "specs": "Specs"
+      "sizes": "Size",
+      "specs": "Specifications",
+      "fit": "Fit Details"
     }
   },
   "products": [
     {
       "id": 1,
-      "name": "4-Pack Art Socks",
-      "price": 39,
+      "name": "4-pack of art illustration socks",
+      "price": 49,
       "imageUrl": "images/4_Pack_Art.jpg",
-      "manufacturer": "Huang Textiles",
-      "material": "Organic Cotton",
-      "functionality": "Moisture-wicking, Breathable",
-      "style": "Crew",
+      "manufacturer": "FusionSock",
+      "quantity": 4,
+      "material": "Organic cotton (92%) + Spandex (8%)",
+      "functionality": "Moisture-wicking, breathable and antibacterial",
       "specs": {
-        "thickness": "Medium",
-        "seam": "Flat toe seam",
-        "length": "Crew length"
+        "thickness": "1",
+        "elasticity": "2",
+        "flexibility": "3"
       },
-      "colors": ["Black", "White", "Gray"],
-      "sizes": ["S", "M", "L"]
+      "fit": {
+        "type": "short cuff",
+        "sockSize": "26-29",
+        "shoeSize": "35-38"
+      },
+      "colors": ["black", "white", "gray"]
     }
   ]
 }
