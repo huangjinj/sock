@@ -338,6 +338,28 @@ button {
   border-bottom: none;
 }
 
+.spec-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.spec-option {
+  padding: 0.4rem 0.8rem;
+  background: #f1f5f9;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  color: #475569;
+  transition: all 0.2s ease;
+}
+
+.spec-option.selected {
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 500;
+}
+
 .product-details dl {
   margin: 0;
   display: grid;

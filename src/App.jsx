@@ -29,7 +29,17 @@ function ProductCard({ product, locale, labels, onProductClick }) {
   )
 }
 
-function ProductDetails({ product, locale, labels, onBack }) {
+function ProductDetails({ product, locale, labels, specItems, onBack }) {
+  // 确保specItems存在，如果不存在则使用默认值
+  const t = { 
+    product: { 
+      specItems: specItems || {
+        thickness: ['thin', 'medium', 'thick'],
+        elasticity: ['slight', 'elastic', 'superelastic'],
+        flexibility: ['regular', 'soft', 'very soft']
+      }
+    }
+  }; // 创建一个包含specItems的t对象
   return (
     <div className="product-details-page">
       <button className="back-button" onClick={onBack}>← Back to Shop</button>
@@ -90,41 +100,71 @@ function ProductDetails({ product, locale, labels, onBack }) {
               <h3>{labels.specs}</h3>
               <ul>
                 {Object.entries(product.specs).map(([key, value]) => {
-                  let specLabel = value;
-                  if (key === 'thickness') {
-                    const thicknessMap = {
-                      'thin': '偏薄',
-                      'medium': '居中',
-                      'thick': '偏厚',
-                      '偏薄': '偏薄',
-                      '居中': '居中',
-                      '偏厚': '偏厚'
-                    };
-                    specLabel = thicknessMap[value] || value;
-                  } else if (key === 'elasticity') {
-                    const elasticityMap = {
-                      'slight': '微弹',
-                      'elastic': '弹力',
-                      'super elastic': '超弹',
-                      '微弹': '微弹',
-                      '弹力': '弹力',
-                      '超弹': '超弹'
-                    };
-                    specLabel = elasticityMap[value] || value;
-                  } else if (key === 'flexibility') {
-                    const flexibilityMap = {
-                      'regular': '常规',
-                      'soft': '柔软',
-                      'very soft': '很柔软',
-                      '常规': '常规',
-                      '柔软': '柔软',
-                      '很柔软': '很柔软'
-                    };
-                    specLabel = flexibilityMap[value] || value;
-                  }
+                  // 获取所有可能的选项
+                  const allOptions = t.product.specItems[key] || [];
+                  
+                  // 获取当前选中的选项的翻译
+                  const getSpecLabel = (specValue) => {
+                    // 根据当前语言选择翻译映射
+                    const isChinese = locale === 'zh-CN';
+                    
+                    if (key === 'thickness') {
+                      const thicknessMap = isChinese ? {
+                        'thin': '偏薄',
+                        'medium': '居中',
+                        'thick': '偏厚'
+                      } : {
+                        '偏薄': 'thin',
+                        '居中': 'medium',
+                        '偏厚': 'thick'
+                      };
+                      return thicknessMap[specValue] || specValue;
+                    } else if (key === 'elasticity') {
+                      const elasticityMap = isChinese ? {
+                        'slight': '微弹',
+                        'elastic': '弹力',
+                        'superelastic': '超弹'
+                      } : {
+                        '微弹': 'slight',
+                        '弹力': 'elastic',
+                        '超弹': 'superelastic'
+                      };
+                      return elasticityMap[specValue] || specValue;
+                    } else if (key === 'flexibility') {
+                      const flexibilityMap = isChinese ? {
+                        'regular': '常规',
+                        'soft': '柔软',
+                        'very soft': '很柔软'
+                      } : {
+                        '常规': 'regular',
+                        '柔软': 'soft',
+                        '很柔软': 'very soft'
+                      };
+                      return flexibilityMap[specValue] || specValue;
+                    }
+                    return specValue;
+                  };
+                  
+                  // 获取当前选中项的翻译
+                  const currentLabel = getSpecLabel(value);
+                  
                   return (
                     <li key={key}>
-                      <strong>{key}:</strong> {specLabel}
+                      <strong>{key}:</strong>
+                      <div className="spec-options">
+                        {allOptions.map((option, index) => {
+                          const optionLabel = getSpecLabel(option);
+                          const isSelected = option === value;
+                          return (
+                            <span 
+                              key={index} 
+                              className={`spec-option ${isSelected ? 'selected' : ''}`}
+                            >
+                              {optionLabel}
+                            </span>
+                          );
+                        })}
+                      </div>
                     </li>
                   );
                 })}
@@ -205,6 +245,7 @@ export default function App() {
                 product={selectedProduct} 
                 locale={locale} 
                 labels={t.product.labels} 
+                specItems={t.product.specItems} 
                 onBack={handleBackToShop}
               />
             ) : (

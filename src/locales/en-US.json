@@ -34,6 +34,11 @@
       "sizes": "Size",
       "specs": "Specifications",
       "fit": "Fit Details"
+    },
+    "specItems": {
+      "thickness": ["thin", "medium", "thick"],
+      "elasticity": ["slight", "elastic", "superelastic"],
+      "flexibility": ["regular", "soft", "very soft"]
     }
   },
   "products": [

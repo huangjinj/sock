@@ -34,6 +34,11 @@
       "sizes": "尺码",
       "specs": "规格",
       "fit": "尺码详情"
+    },
+    "specItems": {
+      "thickness": ["偏薄", "居中", "偏厚"],
+      "elasticity": ["微弹", "弹力", "超弹"],
+      "flexibility": ["常规", "柔软", "很柔软"]
     }
   },
   "products": [
