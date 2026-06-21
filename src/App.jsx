@@ -327,7 +327,7 @@ export default function App() {
               </div>
               <div>
                 <img
-                  src="/images/weChat_Huang.jpg" 
+                  src="./images/weChat_Huang.jpg" 
                   alt={t.common.footer.contact.webChatAlt} 
                   style={{ width: '30%', height: '30%' }}
                 />
