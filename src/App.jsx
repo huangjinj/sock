@@ -66,7 +66,7 @@ function ProductDetails({ product, locale, labels, specItems, onBack }) {
             )}
             {product.quantity && (
               <>
-                <dt>Quantity</dt>
+                <dt>{labels.quantity}</dt>
                 <dd>{product.quantity}</dd>
               </>
             )}
@@ -88,9 +88,17 @@ function ProductDetails({ product, locale, labels, specItems, onBack }) {
             <div className="product-colors">
               <h3>{labels.colors}</h3>
               <div className="color-options">
-                {product.colors.map((color, index) => (
-                  <span key={index} className="color-badge">{color}</span>
-                ))}
+                {product.colors.map((color, index) => {
+                  // 根据当前语言显示对应的颜色名称
+                  const displayColor = locale === 'zh-CN' ? color : 
+                    color === '黑色' ? 'Black' : 
+                    color === '白色' ? 'White' : 
+                    color === '灰色' ? 'Gray' : 
+                    color;
+                  return (
+                    <span key={index} className="color-badge">{displayColor}</span>
+                  );
+                })}
               </div>
             </div>
           )}
@@ -150,7 +158,7 @@ function ProductDetails({ product, locale, labels, specItems, onBack }) {
                   
                   return (
                     <li key={key}>
-                      <strong>{key}:</strong>
+                      <strong>{locale === 'zh-CN' ? (key === 'thickness' ? '厚度' : key === 'elasticity' ? '弹力' : '柔软度') : key}:</strong>
                       <div className="spec-options">
                         {allOptions.map((option, index) => {
                           const optionLabel = getSpecLabel(option);
@@ -178,7 +186,7 @@ function ProductDetails({ product, locale, labels, specItems, onBack }) {
               <ul>
                 {Object.entries(product.fit).map(([key, value]) => (
                   <li key={key}>
-                    <strong>{key}:</strong> {value}
+                    <strong>{labels[key] || key}:</strong> {value}
                   </li>
                 ))}
               </ul>

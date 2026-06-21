@@ -30,10 +30,17 @@
       "manufacturer": "品牌",
       "material": "成分",
       "functionality": "功能",
+      "quantity": "数量",
       "colors": "颜色",
       "sizes": "尺码",
       "specs": "规格",
-      "fit": "尺码详情"
+      "fit": "尺码详情",
+      "thickness": "厚度",
+      "elasticity": "弹力",
+      "flexibility": "柔软度",
+      "type": "类型",
+      "sockSize": "码号",
+      "shoeSize": "鞋码"
     },
     "specItems": {
       "thickness": ["偏薄", "居中", "偏厚"],

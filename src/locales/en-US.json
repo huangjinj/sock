@@ -30,10 +30,17 @@
       "manufacturer": "Brand",
       "material": "Material",
       "functionality": "Functionality",
+      "quantity": "Quantity",
       "colors": "Colors",
       "sizes": "Size",
       "specs": "Specifications",
-      "fit": "Fit Details"
+      "fit": "Fit Details",
+      "thickness": "Thickness",
+      "elasticity": "Elasticity",
+      "flexibility": "Flexibility",
+      "type": "Type",
+      "sockSize": "Sock Size",
+      "shoeSize": "Shoe Size"
     },
     "specItems": {
       "thickness": ["thin", "medium", "thick"],
