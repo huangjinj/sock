@@ -30,18 +30,6 @@ function ProductCard({ product, locale, labels, onProductClick }) {
 }
 
 function ProductDetails({ product, locale, labels, specItems, onBack }) {
-  const [currentImage, setCurrentImage] = useState(0);
-  
-  // 自动轮播效果
-  useEffect(() => {
-    if (product.images && product.images.length > 1) {
-      const interval = setInterval(() => {
-        setCurrentImage(prev => (prev + 1) % product.images.length);
-      }, 3000);
-      return () => clearInterval(interval);
-    }
-  }, [product.images]);
-  
   // 确保specItems存在，如果不存在则使用默认值
   const t = { 
     product: { 
@@ -58,27 +46,24 @@ function ProductDetails({ product, locale, labels, specItems, onBack }) {
       <div className="product-details-container">
         <div className="product-image-large">
           {product.images && product.images.length > 0 ? (
-            <div className="image-carousel">
-              {product.images.map((imageUrl, index) => (
-                <img
-                  key={index}
-                  src={imageUrl}
-                  alt={`${product.name} - ${index + 1}`}
-                  className={index === currentImage ? 'active' : ''}
-                  style={{ display: index === currentImage ? 'block' : 'none' }}
-                  onError={(event) => {
-                    event.currentTarget.style.display = 'none'
-                  }}
-                />
-              ))}
+            <div className="image-gallery">
               {product.images.length > 1 && (
-                <div className="image-indicators">
-                  {product.images.map((_, index) => (
-                    <span 
+                <div className="thumbnail-list">
+                  {product.images.map((imageUrl, index) => (
+                    <div 
                       key={index} 
-                      className={index === currentImage ? 'active' : ''} 
-                      onClick={() => setCurrentImage(index)}
-                    />
+                      className="thumbnail"
+
+                    >
+                      <img
+                        src={imageUrl}
+                        alt={`${product.name} - ${index + 1}`}
+                        loading="lazy"
+                        onError={(event) => {
+                          event.currentTarget.style.display = 'none'
+                        }}
+                      />
+                    </div>
                   ))}
                 </div>
               )}

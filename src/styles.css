@@ -485,59 +485,74 @@ main {
     grid-template-columns: 1fr;
   }
 
-  /* Image Carousel */
-  .image-carousel {
-    position: relative;
+  /* Image Gallery with Thumbnails */
+  .image-gallery {
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
+  }
+
+  .main-image {
+    position: relative;
     border-radius: 0.75rem;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
   }
 
-  .image-carousel img {
+  .main-image img {
     width: 100%;
     height: auto;
-    display: none;
+    display: block;
+    object-fit: contain;
+  }
+
+  .thumbnail-list {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .thumbnail {
+    flex: 0 0 80px;
+    height: 80px;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease;
+    /* 确保缩略图不会重复显示主图片 */
+    opacity: 0.9;
+  }
+  
+  .thumbnail:hover {
+    opacity: 1;
+  }
+
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
   }
 
-  .image-carousel img.active {
-    display: block;
+  .thumbnail.active {
+    border-color: #3b82f6;
   }
 
-  .image-indicators {
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    gap: 8px;
+  .thumbnail:hover {
+    border-color: #93c5fd;
   }
 
-  .image-indicators span {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  .image-indicators span:hover {
-    background-color: rgba(255, 255, 255, 0.8);
-  }
-
-  .image-indicators span.active {
-    background-color: #ffffff;
-  }
-
-  /* Responsive adjustments for image carousel */
+  /* Responsive adjustments for image gallery */
   @media (max-width: 640px) {
-    .image-carousel {
+    .image-gallery {
       max-width: 100%;
+    }
+    
+    .thumbnail {
+      flex: 0 0 60px;
+      height: 60px;
     }
   }
 }
