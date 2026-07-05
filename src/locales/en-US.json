@@ -71,6 +71,116 @@
       "colors": ["Blue & Red", "Yellow & Orrage", "White & Purpule", "Green & White"],
       "images": ["images/1_Blue.jpg", "images/1_Orange.jpg", "images/1_Key_Features.jpg", "images/1_Perfect_Gift.jpg", 
          "images/1_Color_Options.jpg", "images/1_Premium_Comfort.jpg"]
+    },
+    {
+      "id": 2,
+      "name": "3-Pair Trendy Slouch Socks",
+      "price": 39,
+      "imageUrl": "images/2_Style.jpg",
+      "manufacturer": "FusionSock",
+      "quantity": 3,
+      "material": "80% Polyester + 18.5% Cotton + 1.5% Elastane",
+      "functionality": "Fade-resistant prints, Non-slip soles, Soft-stretch cuffs, Moisture-wicking knit, Machine-washable shape retention",
+      "specs": {
+        "thickness": "medium",
+        "elasticity": "elastic",
+        "flexibility": "soft"
+      },
+      "fit": {
+        "type": "medium cuff",
+        "sockSize": "27-30",
+        "shoeSize": "36-40"
+      },
+      "colors": ["Wavy Purple", "Color Block", "Playful Pink"],
+      "images": ["images/2_Color.jpg", "images/2_Desc_1.jpg", "images/2_Desc_2.jpg", "images/2_Desc_4.jpg", "images/2_Desc_5.jpg", "images/2_Feature.jpg", "images/2_Style.jpg"]
+    },
+    {
+      "id": 4,
+      "name": "Abstract Graffiti Crew Socks",
+      "price": 45,
+      "imageUrl": "images/4_Art.jpg",
+      "manufacturer": "FusionSock",
+      "quantity": 1,
+      "material": "Xinjiang Cotton (90%) + Spandex (10%)",
+      "functionality": "Premium Cotton, Abstract Graffiti, No-Pilling, Shape-Retaining, All-Day Breathable",
+      "specs": {
+        "thickness": "medium",
+        "elasticity": "elastic",
+        "flexibility": "soft"
+      },
+      "fit": {
+        "type": "medium cuff",
+        "sockSize": "26-29",
+        "shoeSize": "35-38"
+      },
+      "colors": ["Multi-color"],
+      "images": ["images/4_Art.jpg", "images/4_Desc_1.jpg", "images/4_Desc_2.jpg", "images/4_Features.jpg", "images/4_Material.jpg", "images/4_Style.jpg"]
+    },
+    {
+      "id": 5,
+      "name": "Art Socks with Color-Blocked Toes",
+      "price": 42,
+      "imageUrl": "images/5_Color.jpg",
+      "manufacturer": "FusionSock",
+      "quantity": 1,
+      "material": "Combed Cotton Stretch",
+      "functionality": "Vibrant Patterned Design, High-Stretch Fit, Color-Blocked Toe",
+      "specs": {
+        "thickness": "medium",
+        "elasticity": "elastic",
+        "flexibility": "soft"
+      },
+      "fit": {
+        "type": "medium cuff",
+        "sockSize": "27-30",
+        "shoeSize": "36-40"
+      },
+      "colors": ["Navy Blue", "Light Purple", "Vibrant Color"],
+      "images": ["images/5_Color.jpg", "images/5_Desc_4.jpg", "images/5_Features.jpg", "images/5_Print.jpg"]
+    },
+    {
+      "id": 7,
+      "name": "Novelty Asymmetric Mismatched Cotton Socks",
+      "price": 55,
+      "imageUrl": "images/7_Style.jpg",
+      "manufacturer": "FusionSock",
+      "quantity": 1,
+      "material": "Combed Cotton Stretch",
+      "functionality": "Bold. Breathable. Non-slip. Wash-and-wear.",
+      "specs": {
+        "thickness": "medium",
+        "elasticity": "superelastic",
+        "flexibility": "very soft"
+      },
+      "fit": {
+        "type": "medium cuff",
+        "sockSize": "27-30",
+        "shoeSize": "36-40"
+      },
+      "colors": ["Art", "Fruit", "Graffiti"],
+      "images": ["images/7_Style.jpg", "images/7_Desc_1.jpg", "images/7_Desc_2.jpg", "images/7_Desc_3.jpg", "images/7_Desc_4.jpg", "images/7_Desc_5.jpg", "images/7_Feature.jpg"]
+    },
+    {
+      "id": 8,
+      "name": "Chinese Style Full Printed Socks",
+      "price": 48,
+      "imageUrl": "images/8_Style.jpg",
+      "manufacturer": "FusionSock",
+      "quantity": 1,
+      "material": "Xinjiang Cotton (90%) + Spandex (10%)",
+      "functionality": "Dragon-Print Sheer Mesh, Barefoot-Feel Toe, Heat-Defying Breathability, Seamless Skin Integration",
+      "specs": {
+        "thickness": "medium",
+        "elasticity": "elastic",
+        "flexibility": "soft"
+      },
+      "fit": {
+        "type": "medium cuff",
+        "sockSize": "26-29",
+        "shoeSize": "35-38"
+      },
+      "colors": ["Qing Dragon"],
+      "images": ["images/8_Style.jpg", "images/8_Style_2.jpg", "images/8_retro.jpg", "images/8_Desc_1.jpg", "images/8_Desc_2.jpg", "images/8_Desc_3.jpg", "images/8_Desc_4.jpg", "images/8_Desc_5.jpg", "images/8_Desc_6.jpg", "images/8_Desc_7.jpg", "images/8_Desc_8.jpg", "images/8_Design.jpg", "images/8_Feature.jpg"]
     }
   ]
 }

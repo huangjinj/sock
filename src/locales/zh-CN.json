@@ -71,6 +71,116 @@
       "colors": ["蓝色 & 红色", "黄色 & 橙色", "白色 & 紫色", "绿色 & 白色"],
       "images": ["images/1_Blue.jpg", "images/1_Orange.jpg", "images/1_Key_Features.jpg", "images/1_Perfect_Gift.jpg", 
          "images/1_Color_Options.jpg", "images/1_Premium_Comfort.jpg"]
+    },
+    {
+      "id": 2,
+      "name": "经典棉袜",
+      "price": 39,
+      "imageUrl": "images/2_Style.jpg",
+      "manufacturer": "融履",
+      "quantity": 3,
+      "material": "精梳棉（90%）+ 氨纶（10%）",
+      "functionality": "透气，吸湿排汗",
+      "specs": {
+        "thickness": "居中",
+        "elasticity": "弹力",
+        "flexibility": "柔软"
+      },
+      "fit": {
+        "type": "中筒",
+        "sockSize": "27-30码",
+        "shoeSize": "36-40码"
+      },
+      "colors": ["黑色", "白色", "灰色"],
+      "images": ["images/2_Color.jpg", "images/2_Desc_1.jpg", "images/2_Desc_2.jpg", "images/2_Desc_4.jpg", "images/2_Desc_5.jpg", "images/2_Feature.jpg"]
+    },
+    {
+      "id": 4,
+      "name": "艺术图案袜",
+      "price": 45,
+      "imageUrl": "images/4_Art.jpg",
+      "manufacturer": "融履",
+      "quantity": 2,
+      "material": "有机棉（95%）+ 氨纶（5%）",
+      "functionality": "透气，舒适",
+      "specs": {
+        "thickness": "居中",
+        "elasticity": "弹力",
+        "flexibility": "柔软"
+      },
+      "fit": {
+        "type": "短筒",
+        "sockSize": "26-29码",
+        "shoeSize": "35-38码"
+      },
+      "colors": ["多色", "蓝色主题", "红色主题"],
+      "images": ["images/4_Desc_1.jpg", "images/4_Desc_2.jpg", "images/4_Features.jpg", "images/4_Material.jpg", "images/4_Style.jpg"]
+    },
+    {
+      "id": 5,
+      "name": "印花设计袜",
+      "price": 42,
+      "imageUrl": "images/5_Color.jpg",
+      "manufacturer": "融履",
+      "quantity": 3,
+      "material": "精梳棉（88%）+ 氨纶（12%）",
+      "functionality": "透气，耐用",
+      "specs": {
+        "thickness": "居中",
+        "elasticity": "弹力",
+        "flexibility": "柔软"
+      },
+      "fit": {
+        "type": "中筒",
+        "sockSize": "27-30码",
+        "shoeSize": "36-40码"
+      },
+      "colors": ["花卉", "几何", "抽象"],
+      "images": ["images/5_Color.jpg", "images/5_Desc_4.jpg", "images/5_Features.jpg", "images/5_Print.jpg"]
+    },
+    {
+      "id": 7,
+      "name": "高端舒适袜",
+      "price": 55,
+      "imageUrl": "images/7_Style.jpg",
+      "manufacturer": "融履",
+      "quantity": 2,
+      "material": "长绒棉（94%）+ 氨纶（6%）",
+      "functionality": "吸湿排汗，抗菌，舒适",
+      "specs": {
+        "thickness": "居中",
+        "elasticity": "超弹",
+        "flexibility": "很柔软"
+      },
+      "fit": {
+        "type": "中筒",
+        "sockSize": "27-30码",
+        "shoeSize": "36-40码"
+      },
+      "colors": ["经典", "现代", "复古"],
+      "images": ["images/7_Style.jpg", "images/7_Desc_1.jpg", "images/7_Desc_2.jpg", "images/7_Desc_3.jpg", "images/7_Desc_4.jpg", "images/7_Desc_5.jpg", "images/7_Feature.jpg"]
+    },
+    {
+      "id": 8,
+      "name": "复古风格袜",
+      "price": 48,
+      "imageUrl": "images/8_Style.jpg",
+      "manufacturer": "融履",
+      "quantity": 3,
+      "material": "有机棉（91%）+ 氨纶（9%）",
+      "functionality": "透气，舒适，时尚",
+      "specs": {
+        "thickness": "居中",
+        "elasticity": "弹力",
+        "flexibility": "柔软"
+      },
+      "fit": {
+        "type": "短筒",
+        "sockSize": "26-29码",
+        "shoeSize": "35-38码"
+      },
+      "colors": ["复古", "经典", "怀旧"],
+      "images": ["images/8_StreetStyle.jpg", "images/8_MoneyStyle.jpg", "images/8_Desc_1.jpg", "images/8_Desc_2.jpg", "images/8_Desc_3.jpg", "images/8_Desc_4.jpg", "images/8_Desc_5.jpg", "images/8_Desc_6.jpg", "images/8_Desc_7.jpg", "images/8_Desc_8.jpg", "images/8_Design.jpg", "images/8_Feature.jpg"]
     }
   ]
 }
