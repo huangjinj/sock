@@ -107,6 +107,12 @@ function ProductDetails({ product, locale, labels, specItems, onBack }) {
                 <dd>{product.functionality}</dd>
               </>
             )}
+            {product.description && (
+              <>
+                <dt>Product Description</dt>
+                <dd>{product.description}</dd>
+              </>
+            )}
           </dl>
 
           {product.colors && product.colors.length > 0 && (
