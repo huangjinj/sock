@@ -109,7 +109,7 @@ function ProductDetails({ product, locale, labels, specItems, onBack }) {
             )}
             {product.description && (
               <>
-                <dt>Product Description</dt>
+                <dt>{locale === 'zh-CN' ? '产品描述' : 'Product Description'}</dt>
                 <dd>{product.description}</dd>
               </>
             )}
